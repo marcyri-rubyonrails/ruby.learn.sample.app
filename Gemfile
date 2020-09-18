@@ -1,41 +1,39 @@
 source "https://rubygems.org"
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "2.6.3"
 
 gem "rails", "6.0.3.2"
-gem "bcrypt", "3.1.7"
-gem "faker", "1.4.2"
-gem "carrierwave", "0.10.0"
-gem "mini_magick", "3.8.0"
-gem "fog", ">1.36.0"
-gem "will_paginate", "3.1.5"
-gem "bootstrap-will_paginate", "0.0.10"
-gem "bootstrap-sass", ">3.2.0.0"
-gem "sass-rails", ">5.0.2"
-gem "uglifier", "2.5.3"
-gem "coffee-rails", ">4.1.0"
-gem "jquery-rails", ">4.0.3"
+gem "sass-rails", "6.0.0"
 gem "turbolinks", ">=5.2.1"
-gem "jbuilder", ">2.2.3"
-gem "sdoc", "0.4.0", group: :doc
+gem "jbuilder", "2.10.0"
 gem "bootsnap", "1.4.6", require: false
+gem "webpacker", "4.2.2"
+gem "puma", "4.3.5"
 
 group :development, :test do
   gem "sqlite3", "1.4.2"
   gem "byebug", "11.1.3", platforms: [:mri, :mingw, :x64_mingw]
-  gem "web-console", ">4.0.2"
+end
+
+group :development do
+  gem "web-console", "4.0.2"
+  gem "listen", "3.2.1"
   gem "spring", "2.1.0"
+  gem "spring-watcher-listen", "2.0.1"
 end
 
 group :test do
-  gem "minitest-reporters", "1.0.5"
-  gem "mini_backtrace", "0.1.3"
-  gem "guard-minitest", "2.3.1"
+  gem "capybara", "3.32.2"
+  gem "selenium-webdriver", "3.142.7"
+  gem "webdrivers", "4.3.0"
+  gem "rails-controller-testing", "1.0.4"
+  gem "minitest", "5.11.3"
+  gem "minitest-reporters", "1.3.8"
+  gem "guard", "2.16.2"
+  gem "guard-minitest", "2.4.6"
 end
 
 group :production do
   gem "pg", "1.2.3"
   gem "rails_12factor", "0.0.2"
-  gem "puma", ">3.1.0"
 end
-
-gem "activesupport", "~>6.0"
