@@ -13,6 +13,11 @@ gem "puma", "4.3.5"
 group :development, :test do
   gem "sqlite3", "1.4.2"
   gem "byebug", "11.1.3", platforms: [:mri, :mingw, :x64_mingw]
+
+  gem "minitest", "5.11.3"
+  gem "minitest-reporters", "1.3.8"
+  gem "guard", "2.16.2"
+  gem "guard-minitest", "2.4.6"
 end
 
 group :development do
@@ -27,10 +32,6 @@ group :test do
   gem "selenium-webdriver", "3.142.7"
   gem "webdrivers", "4.3.0"
   gem "rails-controller-testing", "1.0.4"
-  gem "minitest", "5.11.3"
-  gem "minitest-reporters", "1.3.8"
-  gem "guard", "2.16.2"
-  gem "guard-minitest", "2.4.6"
 end
 
 group :production do
