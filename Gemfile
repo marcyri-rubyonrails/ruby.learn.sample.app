@@ -1,9 +1,10 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
-ruby "2.6.3"
+ruby "2.7.0"
 
 gem "rails", "6.0.3.2"
-gem "sass-rails", "6.0.0"
+# gem "sass-rails", "6.0.0"
+gem 'bootstrap-sass'
 gem "turbolinks", ">=5.2.1"
 gem "jbuilder", "2.10.0"
 gem "bootsnap", "1.4.6", require: false
