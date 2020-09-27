@@ -10,6 +10,7 @@ gem "jbuilder", "2.10.0"
 gem "bootsnap", "1.4.6", require: false
 gem "webpacker", "4.2.2"
 gem "puma", "4.3.5"
+gem 'bcrypt', "3.1.13"
 
 group :development, :test do
   gem "sqlite3", "1.4.2"
